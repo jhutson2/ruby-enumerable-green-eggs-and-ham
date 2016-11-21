@@ -10,24 +10,20 @@ class GreenEggsAndHamTest < MiniTest::Test
   end
 
   def test_01_count_of_total_words
-    skip
     assert_equal 116, @book.word_count
   end
 
   def test_02_all_unique_words_sorted
-    skip
     expected = %w(a am and anywhere do eggs green ham here house i in
       like mouse not or sam sam-i-am that them there with would you)
     assert_equal expected, @book.sorted_unique_words
   end
 
   def test_03_count_of_words_less_than_four_letters
-    skip
     assert_equal 59, @book.number_of_words_shorter_than(4)
   end
 
   def test_04_longest_word
-    skip
     assert_match(/Sam-I-am/i, @book.longest_word)
   end
 

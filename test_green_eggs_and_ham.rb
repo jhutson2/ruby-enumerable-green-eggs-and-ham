@@ -28,17 +28,14 @@ class GreenEggsAndHamTest < MiniTest::Test
   end
 
   def test_05_how_many_stanzas
-    skip
     assert_equal 6, @book.stanzas.count
   end
 
   def test_06_adventure_mode_line_count_should_not_include_blanks
-    skip
     assert_equal 19, @book.lines.count
   end
 
   def test_07_adventure_mode_all_unique_words_and_frequency
-    skip
     expected = {
         "i" => 15, "am" => 2, "sam" => 2, "that" => 3,
         "sam-i-am" => 6, "do" => 11, "not" => 13, "like" => 15,

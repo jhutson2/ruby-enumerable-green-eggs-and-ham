@@ -3,6 +3,7 @@ class GreenEggsAndHam
     @text = File.read('green_eggs_and_ham.txt')
     @words = @text.split(/[ .!?,\n]/).reject { |word| word.empty? }
   end
+
   def word_count
     @words.count
   end
@@ -23,9 +24,17 @@ class GreenEggsAndHam
     end
   end
 
-  def stanzas_count
-    stanzas = @words.select { |word| word.split (gets.chomp) }
-    stanza_amount = stanzas.count
+  def stanzas
+    @text.split ("\n" * 2)
+
+  end
+  def lines
+    @text.split("\n").reject { |word| word.empty? }
+  end
+  def frequency_of_unique_words
+    downcase_words = @words.map { |word| word.downcase }
+    downcase_unique_words = downcase_words.uniq
+    sorted_words = downcase_unique_words.rindex
 
   end
 end
